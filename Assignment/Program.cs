@@ -1,4 +1,5 @@
-﻿namespace Assignment
+﻿using static Assignment.ListGenerator;
+namespace Assignment
 {
     internal class Program
     {
