@@ -32,6 +32,34 @@ namespace Assignment
             #endregion
             #endregion
 
+            #region Element Operators
+            #region 1. Get first Product out of Stock
+            //var Result=ProductsList.FirstOrDefault(N => N.UnitsInStock ==0);
+            //Console.WriteLine(Result);
+            #endregion
+            #region 2.Return the first product whose Price > 1000, unless there is no match, in which case null is returned.
+            //var Result = ProductsList.FirstOrDefault(N => N.UnitPrice > 1000);
+            //Console.WriteLine(Result != null ?  Result : "Not Found");
+            #endregion
+            #region 3. Retrieve the second number greater than 5 
+            //int[] Arr = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
+
+            //int [] Result=Arr.Where(x => x > 5).ToArray();
+            //Console.WriteLine(Result[1]);
+
+            #endregion
+
+            #endregion
+
+            #region Aggregate Operators
+            #region
+
+            #endregion
+
+
+
+            #endregion
+
 
 
 
