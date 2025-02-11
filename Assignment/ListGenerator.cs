@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
@@ -17,11 +18,12 @@ namespace Assignment
 		public decimal UnitPrice { get; set; }
 		public int UnitsInStock { get; set; }
 
-		public int CompareTo(Product? other)
-			=> this.UnitPrice.CompareTo(other?.UnitPrice);
 		
+        public int CompareTo(Product? other)
+            => this.ProductName.CompareTo(other?.ProductName);
 
-		public override string ToString()
+
+        public override string ToString()
 			=> $"ProductID:{ProductID},ProductName:{ProductName},Category{Category},UnitPrice:{UnitPrice},UnitsInStock:{UnitsInStock}";
 
 	}
@@ -99,6 +101,9 @@ namespace Assignment
 
             return lines.ToArray();
         }
+
+        
+
         static ListGenerator()
 		{
 			ProductsList = new List<Product>()

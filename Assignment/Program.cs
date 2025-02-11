@@ -1,4 +1,6 @@
-﻿using static Assignment.ListGenerator;
+﻿using System.Runtime.Intrinsics.Arm;
+using System.Threading;
+using static Assignment.ListGenerator;
 namespace Assignment
 {
     internal class Program
@@ -105,6 +107,42 @@ namespace Assignment
             //Console.WriteLine($"Average Lenght  ={AverageLength}");
             #endregion
             #endregion
+
+            #region Ordering Operators
+            #region 1. Sort a list of products by name
+
+            //ProductsList.Sort();
+
+            //foreach (var item in ProductsList)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            #endregion
+
+            #region 2. Uses a custom comparer to do a case-insensitive sort of the words in an array
+            //String[] Arr = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+            //Array.TOLower(Arr);
+
+            #endregion
+
+            #region 3. Sort a list of products by units in stock from highest to lowest.
+            //var Result = ProductsList.OrderByDescending(X => X.UnitsInStock);
+            //foreach (var Product in Result)
+            //{
+            //    Console.WriteLine(Product);
+            //}
+
+            #endregion
+            #region 4. Sort a list of digits, first by length of their name, and then alphabetically by the name itself.
+            //string[] Arr = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
+            //var Result=Arr.OrderBy(X => X.Length).ThenBy(X => X[0]);
+            //foreach (var Product in Result)
+            //{
+            //    Console.WriteLine(Product);
+            //}
+            #endregion
+            #endregion
+
 
 
 
