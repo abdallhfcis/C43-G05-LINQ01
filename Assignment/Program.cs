@@ -3,6 +3,7 @@ namespace Assignment
 {
     internal class Program
     {
+        
         static void Main(string[] args)
         {
 
@@ -52,13 +53,60 @@ namespace Assignment
             #endregion
 
             #region Aggregate Operators
-            #region
+            #region 1. Uses Count to get the number of odd numbers in the array
+            //int[] Arr = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
+            //var Result=Arr.Count(X => X%2 == 1);
+            //Console.WriteLine(Result);
+            #endregion
+
+            #region 2. Return a list of customers and how many orders each has.
+            //var Result = CustomersList.Select((N,NumberOfOrders) => new { N.CustomerName,NumberOfOrders= N.Orders.Length });
+            //foreach (var item in Result)
+            //{
+            //    Console.WriteLine(item);
+            //}
 
             #endregion
 
-
-
+            #region 3. Return a list of categories and how many products each has
+            //var Result = ProductsList.GroupBy(X => X.Category)
+            //                        .Select((N, Count) => new{N.Key, Count = N.Count() });
+            //foreach (var item in Result)
+            //{
+            //    Console.WriteLine(item);
+            //}
             #endregion
+
+            #region 4. Get the total of the numbers in an array.
+            //int[] Arr = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
+            //Console.WriteLine(Arr.Sum());
+            #endregion
+
+            #region 5. Get the total number of characters of all words in dictionary_english.txt
+
+            //foreach (var item in DictionaryArray)
+            //{
+            //    Console.WriteLine(item.Count());
+            //}
+            #endregion
+
+            #region 6. Get the length of the shortest word in dictionary_english.txt (Read dictionary_english.txt into Array of String First).
+            //int ShortesttLength=DictionaryArray.Min(x => x.Length);
+            //Console.WriteLine($"Short Length ={ShortesttLength}");
+            #endregion
+
+            #region 7. Get the length of the longest word in dictionary_english.txt 
+            //int LongestLength =DictionaryArray.Max(x => x.Length);
+            //Console.WriteLine($"Longest Length ={LongestLength}");
+            #endregion
+
+            #region 8. Get the average length of the words in dictionary_english.txt 
+            //int AverageLength =(int)DictionaryArray.Average(x => x.Length);
+            //Console.WriteLine($"Average Lenght  ={AverageLength}");
+            #endregion
+            #endregion
+
+
 
 
 

@@ -8,6 +8,7 @@ using System.Xml.Linq;
 namespace Assignment
 {
 
+
 	class Product : IComparable<Product>
 	{
 		public long ProductID { get; set; }
@@ -74,8 +75,31 @@ namespace Assignment
 	{
 		public static List<Product> ProductsList { get; set; }
 		public static List<Customer> CustomersList { get; set; }
+        public static string[] DictionaryArray {  get; set; }
+        static string[] ReadFileIntoArray(string filename)
+        {
+            List<string> lines = new List<string>();
 
-		static ListGenerator()
+            try
+            {
+                using (StreamReader sr = new StreamReader(filename))
+                {
+                    string line;
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        lines.Add(line);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("The file could not be read:");
+                Console.WriteLine(e.Message);
+            }
+
+            return lines.ToArray();
+        }
+        static ListGenerator()
 		{
 			ProductsList = new List<Product>()
 			{
@@ -257,6 +281,7 @@ namespace Assignment
 										  Total = (decimal)o.Element("total")
 									  }).ToArray()
 							 }).ToList();
-		}
+            DictionaryArray = ReadFileIntoArray("dictionary_english.txt");
+        }
 	}
 }
